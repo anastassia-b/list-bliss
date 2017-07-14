@@ -1,21 +1,21 @@
 export const fetchTodos = () => (
   $.ajax({
     method: 'GET',
-    url: '/api/todos'
+    url: '/todos'
   })
 );
 
 export const fetchTodo = id => (
   $.ajax({
     method: 'GET',
-    url: `/api/todos/${id}`,
+    url: `/todos/${id}`,
   })
 );
 
 export const createTodo = todo => (
  $.ajax({
     method: 'POST',
-    url: '/api/todos',
+    url: '/todos',
     data: todo
   })
 );
@@ -23,7 +23,7 @@ export const createTodo = todo => (
 export const updateTodo = todo => (
   $.ajax({
     method: 'PATCH',
-    url: `/api/todos/${todo.id}`,
+    url: `/todos/${todo.id}`,
     data: { todo }
   })
 );
@@ -31,6 +31,6 @@ export const updateTodo = todo => (
 export const deleteTodo = todo => (
   $.ajax({
     method: 'DELETE',
-    url: `api/todos/${todo.id}`
+    url: `/todos/${todo.id}`
   })
 );
