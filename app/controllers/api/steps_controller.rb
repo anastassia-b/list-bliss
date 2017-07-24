@@ -1,4 +1,4 @@
-class Api::StepsController < Api::ApiController
+class Api::StepsController < ApplicationController
   def create
     step = Step.new(step_params)
 
