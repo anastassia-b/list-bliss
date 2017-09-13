@@ -250,3 +250,13 @@ li {
   border-radius: 5px;
 }
 }
+
+.todo-title {
+  color: darkblue;
+
+}
+
+.todo-title:hover {
+  color: red;
+  text-decoration: underline
+}
