@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       resources :steps, only: [:create, :index]
     end
     resources :steps, only: [:update, :destroy]
+    resources :users, only: [:create, :show]
   end
 end
