@@ -24,6 +24,6 @@ export const updateStep = step => (
 export const destroyStep = step => (
   $.ajax({
     method: 'DELETE',
-    url: '/api/steps/${step.id}'
+    url: `/api/steps/${step.id}`
   })
 );
