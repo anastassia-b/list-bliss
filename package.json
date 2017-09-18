@@ -35,5 +35,12 @@
   "bugs": {
     "url": "https://github.com/anastassia-b/todolist/issues"
   },
-  "homepage": "https://github.com/anastassia-b/todolist#readme"
+  "homepage": "https://github.com/anastassia-b/todolist#readme",
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.1.x"
+  },
+  "scripts": {
+    "postinstall": "webpack"
+  }
 }
