@@ -7,7 +7,15 @@ import { fetchUser, signup, login, logout } from './actions/auth_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+  let store;
+  if (window.currentUser) {
+    const preloadedState = { session: { currentUser: window.currentUser } };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+
   window.store = store;
   window.dispatch = store.dispatch;
   window.getState = store.getState;
