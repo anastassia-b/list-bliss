@@ -1,4 +1,10 @@
 <div>
+  <script type="text/javascript">
+    <% if logged_in? %>
+      window.currentUser =
+      <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
+    <% end %>
+  </script>
   Hello  <%= current_user %>
   <div id='content'>
   </div>
